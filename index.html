@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Question for Elena ❤️</title>
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+    color:white;
+    text-align:center;
+    overflow:hidden;
+}
+.container{
+    margin-top:15vh;
+    padding:20px;
+}
+h1{
+    font-size:3rem;
+}
+h2{
+    font-size:2rem;
+}
+button{
+    padding:15px 30px;
+    font-size:1.2rem;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    margin:10px;
+}
+.yes{
+    background:#4CAF50;
+    color:white;
+}
+.no{
+    background:#ff4d4d;
+    color:white;
+    position:absolute;
+}
+#response{
+    margin-top:30px;
+    font-size:2rem;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Hi Elena ❤️</h1>
+    <p>From Brandon...</p>
+    <h2>Would you like to go to the park with me? 🌳🥰</h2>
+    <button class="yes" onclick="yesClicked()">Yes! ❤️</button>
+    <button class="no" id="noBtn">No 😢</button>
+    <div id="response"></div>
+</div>
+<script>
+function yesClicked(){
+    document.getElementById("response").innerHTML =
+    "Yay! ❤️ I can't wait to spend time with you at the park! 🌳🥰";
+}
+const noBtn = document.getElementById("noBtn");
+noBtn.addEventListener("mouseover", () => {
+    noBtn.style.top = Math.random()*80 + "%";
+    noBtn.style.left = Math.random()*80 + "%";
+});
+</script>
+</body>
+</html>
